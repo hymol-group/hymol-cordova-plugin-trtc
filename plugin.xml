@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-rtc-tools" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>RTCTools</name>
+    <js-module name="RTCTools" src="www/RTCTools.js">
+        <clobbers target="cordova.plugins.RTCTools" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="RTCTools">
+                <param name="android-package" value="cordova.plugin.videotools.RTCTools" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/RTCTools.java" target-dir="src/cordova/plugin/videotools" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="RTCTools">
+                <param name="ios-package" value="RTCTools" />
+            </feature>
+        </config-file>
+        <config-file platform="ios" target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>需要使用摄像头才能发起视频通话</string>
+        </config-file>
+        <config-file platform="ios" target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>需要使用麦克风才能发起视频通话</string>
+        </config-file>
+        <source-file src="src/ios/RTCTools.m" />
+        <header-file src="src/ios/TRTCVideoView.h" />
+        <header-file src="src/ios/TRTCFloatWindow.h" />
+        <header-file src="src/ios/TRTCVideoViewLayout.h" />
+        <header-file src="src/ios/TRTCSettingViewController.h" />
+        <header-file src="src/ios/TRTCMainViewController.h" />
+        <header-file src="src/ios/TRTCMoreViewController.h" />
+        <header-file src="src/ios/GenerateTestUserSig.h" />
+        <header-file src="src/ios/TRTCNewViewController.h" />
+        <header-file src="src/ios/vendor/Util/NSString+Common.h" />
+        <header-file src="src/ios/vendor/Util/NSString+UISize.h" />
+        <header-file src="src/ios/vendor/Util/NSData+Common.h" />
+        <header-file src="src/ios/vendor/Util/UIView+Additions.h" />
+        <header-file src="src/ios/vendor/Util/ColorMacro.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBImagePickerController.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBAssetsViewController.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBAlbumsViewController.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBCheckmarkView.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBImagePicker.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBAssetCell.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBSlomoIconView.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBVideoIndicatorView.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBVideoIconView.h" />
+        <header-file src="src/ios/vendor/QBImagePicker/QBAlbumCell.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFSecurityPolicy.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFURLSessionManager.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFURLRequestSerialization.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFURLResponseSerialization.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFNetworking.h" />
+        <header-file src="src/ios/vendor/AFNetworking/AFNetworking/AFHTTPSessionManager.h" />
+        <header-file src="src/ios/vendor/MBProgressHUD/MBProgressHUD.h" />
+        <source-file src="src/ios/GenerateTestUserSig.m" />
+        <source-file src="src/ios/TRTCMoreViewController.m" />
+        <source-file src="src/ios/TRTCMainViewController.m" />
+        <source-file src="src/ios/TRTCNewViewController.m" />
+        <source-file src="src/ios/TRTCFloatWindow.m" />
+        <source-file src="src/ios/TRTCVideoView.m" />
+        <source-file src="src/ios/TRTCVideoViewLayout.m" />
+        <source-file src="src/ios/TRTCSettingViewController.m" />
+        <source-file src="src/ios/vendor/Util/UIView+Additions.m" />
+        <source-file src="src/ios/vendor/Util/NSData+Common.m" />
+        <source-file src="src/ios/vendor/Util/NSString+Common.m" />
+        <source-file src="src/ios/vendor/Util/NSString+UISize.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBVideoIconView.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBVideoIndicatorView.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBAlbumCell.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBAlbumsViewController.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBAssetsViewController.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBImagePickerController.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBCheckmarkView.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBSlomoIconView.m" />
+        <source-file src="src/ios/vendor/QBImagePicker/QBAssetCell.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.m" />
+        <source-file src="src/ios/vendor/AFNetworking/UIKit+AFNetworking/AFImageDownloader.m" />
+        <source-file src="src/ios/vendor/AFNetworking/AFNetworking/AFURLResponseSerialization.m" />
+        <source-file src="src/ios/vendor/AFNetworking/AFNetworking/AFHTTPSessionManager.m" />
+        <source-file src="src/ios/vendor/AFNetworking/AFNetworking/AFURLSessionManager.m" />
+        <source-file src="src/ios/vendor/AFNetworking/AFNetworking/AFURLRequestSerialization.m" />
+        <source-file src="src/ios/vendor/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" />
+        <source-file src="src/ios/vendor/AFNetworking/AFNetworking/AFSecurityPolicy.m" />
+        <source-file src="src/ios/vendor/MBProgressHUD/MBProgressHUD.m" />
+        <!-- lib -->
+        <framework src="Foundation.framework" />
+        <framework src="src/ios/lib/TXLiteAVSDK_TRTC.framework"  custom="true" />
+        <framework src="libbz2.tbd" />
+        <framework src="libc++.tbd" />
+        <framework src="libiconv.tbd" />
+        <framework src="libicucore.tbd" />
+        <framework src="libresolv.tbd" />
+        <framework src="libsqlite3.tbd" />
+        <framework src="libz.tbd" />
+    </platform>
+</plugin>

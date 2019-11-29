@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-rtc-tools",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-rtc-tools",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
