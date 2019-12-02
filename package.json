@@ -1,8 +1,8 @@
 {
-  "name": "cordova-plugin-rtc-tools",
+  "name": "hymol-cordova-plugin-trtc",
   "version": "0.0.1",
   "cordova": {
-    "id": "cordova-plugin-rtc-tools",
+    "id": "hymol-cordova-plugin-trtc",
     "platforms": [
       "android"
     ]
