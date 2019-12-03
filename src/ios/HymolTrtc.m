@@ -53,7 +53,7 @@
         vc.physicianRole = [data valueForKey:@"physicianRole"];
         vc.physicianDesc = [data valueForKey:@"physicianDesc"];
     }
-    __weak RTCTools *w_self = self;
+    __weak HymolTrtc *w_self = self;
     vc.onHangUp = ^{
         [w_self onHangUp];
     };

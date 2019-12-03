@@ -71,7 +71,7 @@ public class HymolTrtc extends CordovaPlugin {
         intent.putExtra("customVideoCapture", false);
         intent.putExtra("sdkAppId", sdkAppId);
         intent.putExtra("userSig", userSig);
-        RTCTools.callbackContext = callbackContext;
+        HymolTrtc.callbackContext = callbackContext;
         // super.webView.getContext().startActivity(intent);
         ((MainActivity) super.webView.getContext()).showVideoView(roomId, userId, sdkAppId, userSig, base64Image,
                 physicianName, physicianRole, physicianDesc);
