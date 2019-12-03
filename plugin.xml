@@ -1,19 +1,44 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-rtc-tools" version="0.0.1"
+<plugin id="hymol-cordova-plugin-trtc" version="0.0.1"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>RTCTools</name>
-    <js-module name="RTCTools" src="www/RTCTools.js">
-        <clobbers target="cordova.plugins.RTCTools" />
+    <name>hymol-cordova-plugin-trtc</name>
+    <js-module name="HymolTrtc" src="www/HymolTrtc.js">
+        <clobbers target="cordova.plugins.HymolTrtc" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="RTCTools">
-                <param name="android-package" value="cordova.plugin.videotools.RTCTools" />
+            <feature name="HymolTrtc">
+                <param name="android-package" value="com.haoyuanyiliao.cordova.plugins.HymolTrtc" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
-        <source-file src="src/android/RTCTools.java" target-dir="src/cordova/plugin/videotools" />
+        <source-file src="src/android/Config.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc" />
+        <source-file src="src/android/HymolTrtc.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc" />
+        <source-file src="src/android/MainActivity.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc" />
+        <source-file src="src/android/TRTCMainActivity.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc" />
+        <source-file src="src/android/TRTCVideoViewLayout.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc" />
+        <source-file src="src/android/DaemonJobService.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/service" />
+        <source-file src="src/android/KeepLiveActivity.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/service" />
+        <source-file src="src/android/KeepLiveService.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/service" />
+        <source-file src="src/android/LocalService.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/service" />
+        <source-file src="src/android/RemoteService.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/service" />
+        <source-file src="src/android/ScreenUtil.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/util" />
+        <source-file src="src/android/SystemHelper.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/util" />
+        <source-file src="src/android/Corner.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/widget/roundImage" />
+        <source-file src="src/android/RoundedDrawable.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/widget/roundImage" />
+        <source-file src="src/android/RoundedImageView.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/widget/roundImage" />
+        <source-file src="src/android/VideoRootView.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/widget" />
+        <source-file src="src/android/VideoViewManager.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/widget" />
+        <source-file src="src/android/MovieVideoFrameReader.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo" />
+        <source-file src="src/android/TestRenderVideoFrame.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo" />
+        <source-file src="src/android/TestSendCustomVideoData.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo" />
+        <source-file src="src/android/EglCore.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo/OpenGLBaseModule" />
+        <source-file src="src/android/EglSurfaceBase.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo/OpenGLBaseModule" />
+        <source-file src="src/android/GLI420RenderFilter.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo/OpenGLBaseModule" />
+        <source-file src="src/android/GLTexture2DFilter.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo/OpenGLBaseModule" />
+        <source-file src="src/android/GLTextureOESFilter.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo/OpenGLBaseModule" />
+        <source-file src="src/android/GLThread.java" target-dir="src/com/haoyuanyiliao/cordova/plugins/trtc/TestCustomVideo/OpenGLBaseModule" />
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
@@ -27,7 +52,7 @@
         <config-file platform="ios" target="*-Info.plist" parent="NSMicrophoneUsageDescription">
             <string>需要使用麦克风才能发起视频通话</string>
         </config-file>
-        <source-file src="src/ios/RTCTools.m" />
+        <source-file src="src/ios/HymolTrtc.m" />
         <header-file src="src/ios/TRTCVideoView.h" />
         <header-file src="src/ios/TRTCFloatWindow.h" />
         <header-file src="src/ios/TRTCVideoViewLayout.h" />
