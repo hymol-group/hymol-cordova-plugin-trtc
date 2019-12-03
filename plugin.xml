@@ -42,8 +42,8 @@
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
-            <feature name="RTCTools">
-                <param name="ios-package" value="RTCTools" />
+            <feature name="HymolTrtc">
+                <param name="ios-package" value="HymolTrtc" />
             </feature>
         </config-file>
         <config-file platform="ios" target="*-Info.plist" parent="NSCameraUsageDescription">

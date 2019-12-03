@@ -43,7 +43,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-import cordova.plugin.videotools.RTCTools;
+import com.haoyuanyiliao.cordova.plugins.trtc.HymolTrtc;;
 
 //import com.tencent.liteav.demo.CustomAudioFileReader;
 
@@ -245,7 +245,7 @@ public class TRTCMainActivity extends CordovaActivity implements View.OnClickLis
             trtcCloud.exitRoom();
         }
         // 挂断
-        RTCTools.noticWebview();
+        HymolTrtc.noticWebview();
     }
 
     @Override

@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import cordova.plugin.videotools.RTCTools;
+import com.haoyuanyiliao.cordova.plugins.trtc.HymolTrtc;;
 
 public class VideoViewManager implements TRTCVideoViewLayout.ITRTCVideoViewLayoutListener, View.OnClickListener {
     private String TAG = "VideoViewManager";
@@ -228,7 +228,7 @@ public class VideoViewManager implements TRTCVideoViewLayout.ITRTCVideoViewLayou
             trtcCloud.exitRoom();
         }
         // 挂断
-        RTCTools.noticWebview();
+        HymolTrtc.noticWebview();
     }
 
 
